@@ -275,8 +275,22 @@ int returnBook(int givenBookId){
 
 int registration(char name[50], char password[11], int privacy){
 
+	User* check = user_top;
 	User* newUser;
 	newUser = (User*)malloc(sizeof(User));
+	
+	if(check != NULL){
+		while(strcmp(name,check->user_name) != 0){
+			check = check->next;
+			if(check == NULL){
+				break;
+			}
+		}
+		if(check != NULL){
+			printf("This username is not available.\n");
+			return 0;
+		}
+	}
 	
 	newUser->user_id = default_user_id;
 	strcpy(newUser->user_name,name);
