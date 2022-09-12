@@ -1,7 +1,7 @@
 # Library Management System
 Bu proje c dili üzerinde veri yapıları ile pratik yapmak amacı ile oluşturulmuştur.
 
-## İçerik
+## Fonksiyonlar
 ### Admin
 - Kitap Ekleme
 - Kitap Silme
